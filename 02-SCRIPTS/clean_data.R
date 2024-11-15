@@ -6,14 +6,13 @@ library(parzer)
 df <- readxl::read_xlsx("01-DATA_RAW/vendeeglobe_leaderboard_20241115_060000.xlsx", 
                         range = "B6:U45", col_names = FALSE)
 
-names(df) <- c("Rank", "Nat", "Skipper", "Hour_FR", "Latitude", "Longitude",
+names(df) <- c("Rank", "Nat_Sail", "Skipper", "Hour_FR", "Latitude", "Longitude",
                "Last30min_heading", "Last30min_speed", "Last30min_VMG", "Last30min_distance",
                "SinceLastStandings_heading", "SinceLastStandings_speed", "SinceLastStandings_VMG",
                "SinceLastStandings_distance", "Last24hrs_heading", "Last24hrs_speed", 
                "Last24hrs_VMG", "Last24hrs_distance", "Distance_to_finish", "Distance_to_leader")
 
 df <- df |> 
-  select(Latitude, Longitude) |> 
   mutate(lon = parzer::parse_lon(Longitude),
          lat = parzer::parse_lat(Latitude))
 
