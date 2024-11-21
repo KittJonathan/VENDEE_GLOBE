@@ -1,7 +1,7 @@
 # 📦 Load packages --------------------------------------------------------
 
 library(tidyverse)
-library(maps)
+library(tinytable)
 
 
 # ⬇️ Import the dataset ---------------------------------------------------
@@ -9,6 +9,20 @@ library(maps)
 df <- read_csv("03-DATA_PROCESSED/standings.csv")
 
 # 🌍 Create map -----------------------------------------------------------
+
+bg <- hcl.colors(39, "Inferno")
+
+df |>
+  filter(as_date(datetime) == "2024-11-21") |> 
+  arrange(desc(datetime)) |> 
+  slice(1:40) |> 
+  select(rank, name, surname, nat, sail, distance_to_leader_nm) |> 
+  tt() |> 
+  style_tt(
+    i = 40:2,
+    j = 6,
+    background = bg
+  )
 
 world <- map_data("world")
 
