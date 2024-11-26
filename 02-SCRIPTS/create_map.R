@@ -2,11 +2,38 @@
 
 library(tidyverse)
 library(maps)
+library(sf)
 
 
 # ⬇️ Import the dataset ---------------------------------------------------
 
 df <- read_csv("03-DATA_PROCESSED/standings.csv")
+
+# 🌍 Create map -----------------------------------------------------------
+
+world <- map_data("world")
+
+charlie_dalin <- df |> 
+  filter(surname == "Dalin") |> 
+  select(datetime, name, surname, lon_start = lon, lat_start = lat) |> 
+  mutate(lon_end = lag(lon_start),
+         lat_end = lag(lat_start))
+
+ggplot() +
+  geom_polygon(data = world,
+               aes(x = long, y = lat, group = group)) +
+  geom_point(data = charlie_dalin,
+             aes(x = lon_start, y = lat_start),
+             size = 0.05)
+
+
+
+ggplot() +
+  geom_path(data = world, 
+            aes(x = long, y = lat, group = group)) +
+  geom_point(data = charlie_dalin,
+             aes(x = lon_start, y = lon_end))
+
 
 # 🌍 Create map -----------------------------------------------------------
 
