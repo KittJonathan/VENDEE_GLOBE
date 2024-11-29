@@ -25,6 +25,16 @@ charlie_dalin <- df |>
 p <- ggplot() +
   geom_polygon(data = world,
                aes(x = long, y = lat, group = group)) +
+  geom_point(data = charlie_dalin)
+
+p +
+  transition_time(datetime) +
+  shadow_mark() +
+  labs(title = "{date(frame_time)}")
+
+p <- ggplot() +
+  geom_polygon(data = world,
+               aes(x = long, y = lat, group = group)) +
   geom_point(data = charlie_dalin,
              aes(x = lon_start, y = lat_start),
              size = 0.05)
