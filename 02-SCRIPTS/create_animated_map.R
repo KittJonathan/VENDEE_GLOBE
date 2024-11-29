@@ -18,21 +18,24 @@ charlie_dalin <- df |>
   filter(surname == "Dalin") |> 
   select(datetime, name, surname, lon_start = lon, lat_start = lat) |> 
   mutate(lon_end = lag(lon_start),
-         lat_end = lag(lat_start))
+         lat_end = lag(lat_start)) |> 
+  mutate(date = day(datetime),
+         .after = datetime)
 
-ggplot() +
+p <- ggplot() +
   geom_polygon(data = world,
                aes(x = long, y = lat, group = group)) +
   geom_point(data = charlie_dalin,
              aes(x = lon_start, y = lat_start),
-             size = 0.05) +
-  # geom_segment(data = charlie_dalin,
-  #              aes(x = lon_start, xend = lon_end,
-  #                  y = lat_start, yend = lat_end)) +
-  labs(title = 'Date: {datetime}') +
+             size = 0.05)
+
+p
+
+p +
   transition_time(datetime) +
-  transition_states(datetime) +
-  shadow_mark()
+  shadow_mark() +
+  labs(title = "{date(frame_time)}")
+  
 
 
 
