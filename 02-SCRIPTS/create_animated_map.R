@@ -16,16 +16,24 @@ world <- map_data("world")
 
 charlie_dalin <- df |> 
   filter(surname == "Dalin") |> 
-  select(datetime, name, surname, lon_start = lon, lat_start = lat) |> 
-  mutate(lon_end = lag(lon_start),
-         lat_end = lag(lat_start)) |> 
-  mutate(date = day(datetime),
-         .after = datetime)
+  select(datetime, name, surname, lon, lat)
 
 p <- ggplot() +
   geom_polygon(data = world,
                aes(x = long, y = lat, group = group)) +
-  geom_point(data = charlie_dalin)
+  geom_point(data = charlie_dalin,
+             aes(x = lon, y = lat),
+             size = 0.2,
+             colour = "blue")
+
+p <- p +
+  transition_states(datetime) +
+  shadow_mark()
+
+p
+
+anim_save("04-MAPS/animated_map.gif")
+  
 
 p +
   transition_time(datetime) +
