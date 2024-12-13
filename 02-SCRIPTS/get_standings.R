@@ -79,9 +79,9 @@ get_standings <- function(date = NULL, time = NULL, from = NULL, to = NULL, dir)
   }
 }
 
-get_standings(from = "20241202", to = "20241209", dir = "01-DATA_RAW/")
+get_standings(from = "20241210", to = "20241212", dir = "01-DATA_RAW/")
 
-get_standings(date = "20241213", time = "100000", dir = "01-DATA_RAW/")
+get_standings(date = "20241213", time = "140000", dir = "01-DATA_RAW/")
 
 
 
