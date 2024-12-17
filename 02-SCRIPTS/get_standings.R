@@ -24,8 +24,8 @@ library(tidyverse)
 # date <- "20241202"
 # time <- "140000"
 # time <- NULL
-from <- "20241202"
-to <- "20241209"
+from <- "20241213"
+to <- "20241216"
 dir <- "01-DATA_RAW/"
 
 
@@ -79,9 +79,20 @@ get_standings <- function(date = NULL, time = NULL, from = NULL, to = NULL, dir)
   }
 }
 
-get_standings(from = "20241210", to = "20241212", dir = "01-DATA_RAW/")
-
 get_standings(date = "20241213", time = "140000", dir = "01-DATA_RAW/")
+get_standings(date = "20241213", time = "180000", dir = "01-DATA_RAW/")
+get_standings(date = "20241213", time = "220000", dir = "01-DATA_RAW/")
+
+get_standings(from = "20241214", to = "20241216", dir = "01-DATA_RAW/")
+
+get_standings(date = "20241217", time = "020000", dir = "01-DATA_RAW/")
+get_standings(date = "20241217", time = "060000", dir = "01-DATA_RAW/")
+get_standings(date = "20241217", time = "100000", dir = "01-DATA_RAW/")
+# get_standings(date = "20241217", time = "140000", dir = "01-DATA_RAW/")
+# get_standings(date = "20241217", time = "180000", dir = "01-DATA_RAW/")
+# get_standings(date = "20241217", time = "220000", dir = "01-DATA_RAW/")
+
+
 
 
 
