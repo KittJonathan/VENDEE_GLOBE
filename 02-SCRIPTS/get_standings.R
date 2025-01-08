@@ -1,37 +1,8 @@
-# Download files
-
-# df <- tibble(date = c(rep("20241129", 4), rep("20241130", 6), rep("20241201", 6), rep("20241202", 2)),
-#        time = c("100000", "140000", "180000", "220000",
-#                 "020000", "060000", "100000", "140000", "180000", "220000",
-#                 "020000", "060000", "100000", "140000", "180000", "220000",
-#                 "020000", "060000"))
-
-# df <- df |> 
-#   mutate(url = paste0("https://www.vendeeglobe.org/sites/default/files/ranking/vendeeglobe_leaderboard_",
-#                       date, "_", time, ".xlsx"),
-#          path = paste0("01-DATA_RAW/vendeeglobe_leaderboard_", date, "_", time, ".xlsx"))
-
-# for (i in 1:nrow(df)) {
-#   
-#   download.file(url = df$url[i],
-#                 destfile = df$path[i],
-#                 mode = "wb")
-#   
-# }
+# 📦 Load packages --------------------------------------------------------
 
 library(tidyverse)
 
-# date <- "20241202"
-# time <- "140000"
-# time <- NULL
-from <- "20241213"
-to <- "20241216"
-dir <- "01-DATA_RAW/"
-
-
-!is.null(date)
-
-is.null(date)
+# ⌨️ Create function ------------------------------------------------------
 
 get_standings <- function(date = NULL, time = NULL, from = NULL, to = NULL, dir) {
   
