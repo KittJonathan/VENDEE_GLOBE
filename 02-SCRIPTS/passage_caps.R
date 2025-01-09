@@ -1,7 +1,6 @@
 # Script used to create dataset with skippers and times
 # 2024-12-18
 
-
 # 📦 Load packages --------------------------------------------------------
 
 library(tidyverse)

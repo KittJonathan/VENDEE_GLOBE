@@ -6,7 +6,7 @@ library(parzer)
 
 # 📃 List files -----------------------------------------------------------
 
-paths <- list.files(path = "01-DATA_RAW/", full.names = T)
+paths <- list.files(path = "01-DATA_RAW/", full.names = T, pattern = "*.xlsx")
 
 all_files <- tibble(path = paths) |> 
   separate(col = path, into = c("dir", "file"), sep = "/", remove = FALSE) |> 
