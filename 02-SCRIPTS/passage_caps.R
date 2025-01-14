@@ -82,3 +82,14 @@ times_good_hope <- tibble(
               duration("13d 17H 10M 59S"), duration("14d 8H 42M 16S"),
               duration("18d 8H 47M 2S"))
 )
+
+# Arrivee 
+
+arrival <- tibble(
+  surname = "Dalin",
+  date = "2025-01-14",
+  time = "08:24:49",
+  duration = duration("64d 19H 22M 49S")
+)
+
+arrival
