@@ -49,3 +49,36 @@ times_equator_1 <- tibble(
 
 
 write_csv(x = times_equator_1, file = "03-DATA_PROCESSED/times_equator_1.csv")
+
+# Temps de passage au Cap de Bonne Esperance
+# https://www.vendeeglobe.org/article/les-temps-de-passage-au-cap-de-bonne-esperance
+
+times_good_hope <- tibble(
+  surname = c( "Dalin", "Ruyant", "Simon", "Richomme", "Beyou", "Lunven",
+               "Goodchild", "Bestaven", "Meilhat", "Davies", "Mettraux",
+               "Herrmann", "Crémer", "Dutreux", "Attanasio", "Burton", "Hare",
+               "Séguin", , "Joschke", "Le Cam", "Roura", "Le Turquais", "Ferré",
+               "Pedote", "Boissières", "Dorange", "Marsset", "Soudée", "Duc",
+               "Bellion", "Shiraishi", "Colman", "Heer", "Cornic",  "Cousin",
+              "Amedeo", , "Van Weynbergh", "Xu", "Weöres"),
+  equator = c(duration("19d 3H 43M 2S"), duration("19d 5H 53M 21S"),
+              duration("19d 6H 40M 10S"), duration("19j 07h 01min 02s"),
+              duration("19j 12h 17min 56s"), duration("19j 13h 14min 01s"),
+              duration("19j 17h 20min 01s"), duration("20j 00h 21min 18s"),
+              duration("20j 05h 18min 34s"), duration("21j 21h 24min 01s"),
+              duration("11d 15H 19M 37S"), duration("11d 15H 47M 48S"),
+              duration("11d 15H 59M 16S"), duration("11d 17H 42M 42S"),
+              duration("11d 19H 46M 49S"), duration("11d 20H 8M 33S"),
+              duration("12d 0H 27M 49S"), duration("12d 8H 57M 9S"),
+              duration("12d 11H 50M 55S"), duration("12d 19H 5M 41S"),
+              duration("12d 20H 15M 29S"), duration("12d 20H 52M 38S"),
+              duration("12d 21H 20M 8S"), duration("12d 23H 16M 21S"),
+              duration("13d 0H 5M 2S"), duration("13d 0H 5M 31S"),
+              duration("13d 1H 49M 47S"), duration("13d 2H 11M 6S"),
+              duration("13d 2H 19M 11S"), duration("13d 3H 34M 50S"),
+              duration("13d 5H 32M 7S"), duration("13d 5H 41M 23S"),
+              duration("13d 5H 41M 52S"), duration("13d 10H 38M 51S"),
+              duration("13d 11H 14M 6S"), duration("13d 14H 18M 16S"),
+              duration("13d 17H 10M 59S"), duration("14d 8H 42M 16S"),
+              duration("18d 8H 47M 2S"))
+)
