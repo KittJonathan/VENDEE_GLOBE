@@ -148,6 +148,56 @@ write_csv(x = times_leeuwin, file = "04-RESULTS/times_leeuwin.csv")
 # Temps de passage au Cap Horn
 # https://www.vendeeglobe.org/article/tous-les-temps-de-passage-au-cap-horn
 
+times_leeuwin <- tribble(
+  ~surname, ~duration, ~datetime,
+  "Richomme", "43d 11H 25M 20S", "2024-12-23 23:27:20",
+  "Dalin", "43d 11H 34M 50S", "2024-12-23 23:36:50",
+  "Simon", "44d 21H 19M 38S", "2024-12-25 09:21:38",
+  "Ruyant", "47d 05H 36M 29S", "2024-12-27 17:38:29",
+  "Beyou", "47d 16H 14M 46S", "2024-12-28 04:16:46",
+  
+  
+  "Lunven", "30d 23H 03M 03S", "2024-12-11 11:05:03",
+  "Goodchild", "31d 06H 42M 58S", "2024-12-11 18:44:58",
+  "Meilhat", "31d 10H 11M 05S", "2024-12-11 22:13:05",
+  "Bestaven", "31d 11H 20M 31S", "2024-12-11 23:22:31",
+  "Herrmann", "32d 04H 20M 54S", "2024-12-12 16:22:54",
+  "Mettraux", "32d 07H 48M 57S", "2024-12-12 19:50:57",
+  "Cremer", "32d 15H 00M 57S", "2024-12-13 03:02:57",
+  "Davies", "32d 15H 27M 35S", "2024-12-13 03:29:35",
+  "Dutreux", "33d 14H 48M 10S", "2024-12-14 02:50:10",
+  "Attanasio", "33d 22H 32M 05S", "2024-12-14 10:34:05",
+  "Hare", "33d 23H 18M 25S", "2024-12-14 11:20:25",
+  "Seguin", "35d 08H 05M 24S", "2024-12-15 20:07:24",
+  "Le Cam", "36d 17H 45M 01S", "2024-12-17 05:47:01",
+  "Joschke", "36d 18H 13M 23S", "2024-12-17 06:15:32",
+  "Pedote", "36d 19H 53M 32S", "2024-12-17 07:55:32",
+  "Roura", "36d 20H 10M 18S", "2024-12-17 08:12:18",
+  "Le Turquais", "36d 23H 44M 02S", "2024-12-17 11:46:02",
+  "Ferre", "37d 00H 32M 25S", "2024-12-17 12:34:25",
+  "Marsset", "37d 18H 47M 24S", "2024-12-18 06:49:24",
+  "Duc", "37d 20H 19M 39S", "2024-12-18 08:21:39",
+  "Dorange", "37d 23H 53M 45S", "2024-12-18 11:55:45",
+  "Colman", "38d 07H 36M 45S", "2024-12-18 19:38:45",
+  "Bellion", "38d 10H 04M 02S", "2024-12-18 22:06:02",
+  "Boissieres", "38d 12H 44M 19S", "2024-12-19 00:46:19",
+  "Soudee", "39d 16H 11M 29S", "2024-12-20 04:13:29",
+  "Shiraishi", "39d 20H 39M 55S", "2024-12-20 08:41:55",
+  "Heer", "40d 09H 41M 14S", "2024-12-20 21:43:14",
+  "Cornic", "41d 13H 49M 19S", "2024-12-22 01:51:19",
+  "Xu", "43d 09H 24M 34S", "2024-12-23 21:26:34",
+  "Cousin", "44d 03H 34M 02S", "2024-12-24 15:36:02",
+  "Amedeo", "44d 05H 11M 05S", "2024-12-24 17:13:05",
+  "Van Weynbergh", "45d 15H 59M 36S", "2024-12-26 06:00:36"
+)
+
+times_leeuwin
+
+write_csv(x = times_leeuwin, file = "04-RESULTS/times_leeuwin.csv")
+
+# Temps de passage au Cap Horn
+# https://www.vendeeglobe.org/article/tous-les-temps-de-passage-au-cap-horn
+
 # Temps de passage a l'Equateur (retour)
 
 times_equator_2 <- tribble(
