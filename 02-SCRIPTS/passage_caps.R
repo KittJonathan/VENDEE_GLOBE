@@ -164,7 +164,8 @@ times_equator_2 <- tribble(
   "Mettraux", "64d 14H 48M 24S", "2025-01-14 02:50:24",
   "Dutreux", "65d 19H 11M 36S", "2025-01-15 07:13:36",
   "Crémer", "65d 19H 19M 16S", "2025-01-15 07:21:16",
-  "Davies", "65d 23H 29M 59S", "2025-01-15 11:31:59"
+  "Davies", "65d 23H 29M 59S", "2025-01-15 11:31:59",
+  "Attanasio", "69d 20H 44M 20S", "2025-01-19 08:46:20"
 )
 
 write_csv(x = times_equator_2, file = "04-RESULTS/times_equator_2.csv")

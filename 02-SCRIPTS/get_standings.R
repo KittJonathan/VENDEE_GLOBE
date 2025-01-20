@@ -50,14 +50,14 @@ get_standings <- function(date = NULL, time = NULL, from = NULL, to = NULL, dir)
   }
 }
 
-get_standings(date = "20250117", time = "020000", dir = "01-DATA_RAW/")
-get_standings(date = "20250117", time = "060000", dir = "01-DATA_RAW/")
-get_standings(date = "20250117", time = "100000", dir = "01-DATA_RAW/")
-get_standings(date = "20250117", time = "140000", dir = "01-DATA_RAW/")
-# get_standings(date = "20250117", time = "180000", dir = "01-DATA_RAW/")
-# get_standings(date = "20250117", time = "220000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "020000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "060000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "100000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "140000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "180000", dir = "01-DATA_RAW/")
+get_standings(date = "20250120", time = "220000", dir = "01-DATA_RAW/")
 
-# get_standings(from = "20250101", to = "20250105", dir = "01-DATA_RAW/")
+get_standings(from = "20250118", to = "20250119", dir = "01-DATA_RAW/")
 
 
 
