@@ -138,7 +138,7 @@ times_leeuwin <- tribble(
   "Xu", "43d 09H 24M 34S", "2024-12-23 21:26:34",
   "Cousin", "44d 03H 34M 02S", "2024-12-24 15:36:02",
   "Amedeo", "44d 05H 11M 05S", "2024-12-24 17:13:05",
-  "Van Weynbergh", "45d 15H 59M 36S", "2024-12-26 06:00:36"
+  "Van Weynbergh", "45d 15H 59M 36S", "2024-12-26 04:00:36"
 )
 
 times_leeuwin
@@ -148,21 +148,21 @@ write_csv(x = times_leeuwin, file = "04-RESULTS/times_leeuwin.csv")
 # Temps de passage au Cap Horn
 # https://www.vendeeglobe.org/article/tous-les-temps-de-passage-au-cap-horn
 
-times_leeuwin <- tribble(
+times_horn <- tribble(
   ~surname, ~duration, ~datetime,
   "Richomme", "43d 11H 25M 20S", "2024-12-23 23:27:20",
   "Dalin", "43d 11H 34M 50S", "2024-12-23 23:36:50",
   "Simon", "44d 21H 19M 38S", "2024-12-25 09:21:38",
   "Ruyant", "47d 05H 36M 29S", "2024-12-27 17:38:29",
   "Beyou", "47d 16H 14M 46S", "2024-12-28 04:16:46",
+  "Lunven", "47d 16H 29M 46S", "2024-12-28 04:31:46",
+  "Herrmann", "47d 22H 49M 30S", "2024-12-28 10:51:30",
+  "Meilhat", "47d 22H 50M 01S", "2024-12-28 10:52:01",
+  "Goodchild", "48d 02H 42M 52S", "2024-12-28 14:44:52",
+  "Mettraux", "48d 04H 20M 23S", "2024-12-28 16:22:23",
+
   
-  
-  "Lunven", "30d 23H 03M 03S", "2024-12-11 11:05:03",
-  "Goodchild", "31d 06H 42M 58S", "2024-12-11 18:44:58",
-  "Meilhat", "31d 10H 11M 05S", "2024-12-11 22:13:05",
   "Bestaven", "31d 11H 20M 31S", "2024-12-11 23:22:31",
-  "Herrmann", "32d 04H 20M 54S", "2024-12-12 16:22:54",
-  "Mettraux", "32d 07H 48M 57S", "2024-12-12 19:50:57",
   "Cremer", "32d 15H 00M 57S", "2024-12-13 03:02:57",
   "Davies", "32d 15H 27M 35S", "2024-12-13 03:29:35",
   "Dutreux", "33d 14H 48M 10S", "2024-12-14 02:50:10",
