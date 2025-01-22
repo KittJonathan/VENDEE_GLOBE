@@ -4,9 +4,14 @@ library(tidyverse)
 library(readxl)
 library(parzer)
 
-# 📃 List files -----------------------------------------------------------
+# ⬇️ Import skippers dataset ----------------------------------------------
+
+skippers <- read_csv("03-DATA_PROCESSED/skippers.csv")
+
+# ⬇️ Get data and clean (up to Dalin's arrival) ---------------------------
 
 paths <- list.files(path = "01-DATA_RAW/", full.names = T, pattern = "*.xlsx")
+paths <- paths[384]
 
 all_files <- tibble(path = paths) |> 
   separate(col = path, into = c("dir", "file"), sep = "/", remove = FALSE) |> 
@@ -15,13 +20,20 @@ all_files <- tibble(path = paths) |>
          date_time = str_remove_all(string = date_time, pattern = ".xlsx")) |> 
   separate(col = date_time, into = c("date", "time"), sep = "_") |> 
   select(-file) |> 
-  arrange(date, time)
+  arrange(date, time) |> 
+  mutate(datetime = as_datetime(paste0(date, "-", time))) |> 
+  mutate(sheet_range = case_when(datetime < "2025-01-14 10:00:00" ~ "B6:U45",
+                                 datetime < "2025-01-15 10:00:00" ~ "B9:U45",
+                                 datetime < "2025-01-17 02:00:00" ~ "B9:U45",
+                                 .default = NA))
 
-# ⬇️ Import skippers dataset ----------------------------------------------
+all_files
 
-skippers <- read_csv("03-DATA_PROCESSED/skippers.csv")
 
-# ⬇️ Get data and clean ---------------------------------------------------
+|> 
+  mutate(datetime = as_datetime(date, time))
+  mutate(sheet_range = case_when(date <= 20250113 ~ "B6:U45",
+                                 .default = NA))
 
 all_data <- list()
 
@@ -73,7 +85,10 @@ all_data <- all_data |>
   mutate(lon = case_when(is.na(lon_deg) ~ NA,
                          .default = lon))
 
+# Export the dataset
 
-# 💾 Export the dataset ---------------------------------------------------
+write_csv(x = all_data, file = "03-DATA_PROCESSED/standings_to_20250114060000.csv")
 
-write_csv(x = all_data, file = "03-DATA_PROCESSED/standings.csv")
+# ⬇️ Get and clean data before Richomme's arrival -------------------------
+
+# Richomme : 2025_01_15 07:21:02
