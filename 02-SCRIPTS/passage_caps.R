@@ -183,19 +183,14 @@ times_horn <- tribble(
   "Heer", "65d 03H 34M 58S", "2025-01-14 15:36:58",
   "Cornic", "66d 02H 53M 27S", "2025-01-15 14:55:27",
   "Xu", "66d 11H 37M 12S", "2025-01-15 23:39:12",
-  
-  
-  "Cousin", "44d 03H 34M 02S", "2024-12-24 15:36:02",
-  "Amedeo", "44d 05H 11M 05S", "2024-12-24 17:13:05",
-  "Van Weynbergh", "45d 15H 59M 36S", "2024-12-26 06:00:36"
+  "Cousin", "72d 12H 31M 20S", "2025-01-25 00:33:20",
+  "Amedeo", "73d 08H 24M 54S", "2025-01-25 20:26:54",
+  "Van Weynbergh", "73d 18H 37M 54S", "2025-01-26 06:39:54"
 )
 
-times_leeuwin
+times_horn
 
-write_csv(x = times_leeuwin, file = "04-RESULTS/times_leeuwin.csv")
-
-# Temps de passage au Cap Horn
-# https://www.vendeeglobe.org/article/tous-les-temps-de-passage-au-cap-horn
+write_csv(x = times_horn, file = "04-RESULTS/times_horn.csv")
 
 # Temps de passage a l'Equateur (retour)
 # https://www.vendeeglobe.org/article/temps-de-passage-lequateur-retour
@@ -217,20 +212,27 @@ times_equator_2 <- tribble(
   "Davies", "65d 23H 29M 59S", "2025-01-15 11:31:59",
   "Attanasio", "69d 20H 44M 20S", "2025-01-19 08:46:20",
   "Joschke", "71d 16H 02M 30S", "2025-01-21 04:04:30",
-  "Seguin", "71d 17H 35M 31S", "2025-01-21 05:37:31"
+  "Seguin", "71d 17H 35M 31S", "2025-01-21 05:37:31",
+  "Ferre", "71d 20H 24M 22S", "2025-01-21 08:26:22",
+  "Le Turquais", "71d 23H 20M 24S", "2025-01-21 11:22:24",
+  "Pedote", "72d 01H 55M 37S", "2025-01-21 13:57:37",
+  "Roura", "72d 12H 58M 30S", "2025-01-22 01:00:30",
+  "Le Cam", "72d 21H 11M 07S", "2025-01-22 09:13:07",
+  "Colman", "72d 21H 35M 13S", "2025-01-22 09:37:13"
 )
 
 write_csv(x = times_equator_2, file = "04-RESULTS/times_equator_2.csv")
 
 
-# Arrivee 
+# Arrivees 
 
-arrival <- tibble(
-  surname = c("Dalin", "Richomme", "Simon"),
-  date = c("2025-01-14", "2025-01-15", "2025-01-17"),
-  time = c("08:24:49", "07:12:02", "01:27:37"),
-  duration = c(duration("64d 19H 22M 49S"), duration("65d 18H 10M 2S"),
-               duration("67d 12H 25M 37S"))
+arrivals <- tribble(
+  ~surname, ~datetime, ~duration,
+  "Dalin", "2025-01-14 08:24:49", "64d 19H 22M 49S",
+  "Richomme", "2025-01-15 07:12:02", "65d 18H 10M 2S",
+  "Simon", "2025-01-17 01:27:37", "67d 12H 25M 37S",
+  "Beyou", "2025-01-24 01:58:54", "74d 12H 56M 54S",
+  "Meilhat", "2025-01-24 11:40:15", "74d 22H 38M 15S"
 )
 
-write_csv(x = arrival, file = "04-RESULTS/arrival.csv")
+write_csv(x = arrivals, file = "04-RESULTS/arrivals.csv")
