@@ -245,7 +245,22 @@ arrivals <- tribble(
   "Goodchild", "2025-01-25 15:03:45", "76d 02H 01M 45S",
   "Dutreux", "2025-01-26 16:41:24", "77d 03H 39M 24S",
   "Cremer", "2025-01-27 04:36:28", "77d 15H 34M 28S",
-  "Herrmann", "2025-01-29 23:18:41", "80d 10H 16M 41S"
+  "Herrmann", "2025-01-29 23:18:41", "80d 10H 16M 41S",
+  "Davies", "2025-01-30 11:15:39", "80d 22H 13M 39S"
 )
 
 write_csv(x = arrivals, file = "04-RESULTS/arrivals.csv")
+
+# Abandons
+
+retired <- tribble(
+  ~surname, ~datetime,
+  "Sorel", "2024-11-15 13:25:00",
+  "Burton", "2024-12-05 05:00:00",
+  "Weores", "2024-12-16 18:30:00",
+  "Hare", "2024-12-16 20:09:00",
+  "Bestaven", "2024-12-30 08:00:00",
+  "Bellion", "2025-01-12 08:00:00"
+)
+
+write_csv(x = retired, file = "04-RESULTS/retired.csv")
