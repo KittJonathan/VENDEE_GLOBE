@@ -224,7 +224,8 @@ times_equator_2 <- tribble(
   "Duc", "77d 11H 16M 40S", "2025-01-26 23:18:40",
   "Marsset", "77d 12H 14M 49S", "2025-01-27 00:16:49",
   "Dorange", "77d 13H 06M 54S", "2025-01-27 01:08:54",
-  "Boissieres", "77d 14H 23M 03S", "2025-01-27 02:25:03"
+  "Boissieres", "77d 14H 23M 03S", "2025-01-27 02:25:03",
+  "Cornic", "81d 13H 51M 12S", "2025-01-31 01:53:12"
 )
 
 write_csv(x = times_equator_2, file = "04-RESULTS/times_equator_2.csv")
@@ -246,7 +247,15 @@ arrivals <- tribble(
   "Dutreux", "2025-01-26 16:41:24", "77d 03H 39M 24S",
   "Cremer", "2025-01-27 04:36:28", "77d 15H 34M 28S",
   "Herrmann", "2025-01-29 23:18:41", "80d 10H 16M 41S",
-  "Davies", "2025-01-30 11:15:39", "80d 22H 13M 39S"
+  "Davies", "2025-01-30 11:15:39", "80d 22H 13M 39S",
+  "Attanasio", "2025-02-02 11:50:18", '84d 22H 48M 18S',
+  "Seguin", "2025-02-03 09:33:48", "84d 20H 31M 48S",
+  "Ferre", "2025-02-03 12:21:39", "84d 23H 19M 39S",
+  "Le Turquais", "2025-02-03 12:37:29", "84d 23H 35M 29S",
+  "Roura", "2025-02-03 12:57:48", "84d 23H 55M 48S",
+  "Joschke", "2025-02-04 00:28:36", "85d 11H 26M 36S",
+  "Le Cam", "2025-02-04 04:53:02", "85d 15H 51M 02S",
+  "Colman", "2025-02-04 05:06:33", "85d 16H 04M 33S"
 )
 
 write_csv(x = arrivals, file = "04-RESULTS/arrivals.csv")
@@ -260,7 +269,8 @@ retired <- tribble(
   "Weores", "2024-12-16 18:30:00",
   "Hare", "2024-12-16 20:09:00",
   "Bestaven", "2024-12-30 08:00:00",
-  "Bellion", "2025-01-12 08:00:00"
+  "Bellion", "2025-01-12 08:00:00",
+  "Boissieres", "2025-02-02 14:00:00"
 )
 
 write_csv(x = retired, file = "04-RESULTS/retired.csv")
