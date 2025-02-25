@@ -276,7 +276,7 @@ write_csv(x = arrivals, file = "04-RESULTS/arrivals.csv")
 
 # Abandons
 
-retired <- tribble(
+withdrawals <- tribble(
   ~surname, ~datetime,
   "Sorel", "2024-11-15 13:25:00",
   "Burton", "2024-12-05 05:00:00",
@@ -287,4 +287,4 @@ retired <- tribble(
   "Boissieres", "2025-02-02 14:00:00"
 )
 
-write_csv(x = retired, file = "04-RESULTS/retired.csv")
+write_csv(x = withdrawals, file = "04-RESULTS/withdrawals.csv")
