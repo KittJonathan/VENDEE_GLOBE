@@ -171,7 +171,7 @@ paths <- list.files(path = "01-DATA_RAW/", full.names = T, pattern = "*.xlsx")
 
 # 2025-02-24 : paths[626]
 
-paths <- paths[627:length(paths)]
+# paths <- paths[627:length(paths)]
 
 all_files <- tibble(path = paths) |> 
   separate(col = path, into = c("dir", "file"), sep = "/", remove = FALSE) |> 
@@ -241,11 +241,11 @@ all_data <- all_data |>
                          .default = lon))
 
 # Read existing standings dataset
-d1 <- read_csv("03-DATA_PROCESSED/standings_to_20250224_220000.csv")
+d1 <- read_csv("03-DATA_PROCESSED/standings_to_20250225_100000.csv")
 
 # Combine both datasets
 full_data <- bind_rows(d1, all_data)
 
 # Export the dataset
 
-write_csv(x = full_data, file = "03-DATA_PROCESSED/standings_to_20250225_100000.csv")
+write_csv(x = full_data, file = "03-DATA_PROCESSED/standings.csv")
