@@ -50,14 +50,14 @@ get_standings <- function(date = NULL, time = NULL, from = NULL, to = NULL, dir)
   }
 }
 
-get_standings(date = "20250226", time = "020000", dir = "01-DATA_RAW/")
-get_standings(date = "20250226", time = "060000", dir = "01-DATA_RAW/")
-get_standings(date = "20250226", time = "100000", dir = "01-DATA_RAW/")
-get_standings(date = "20250226", time = "140000", dir = "01-DATA_RAW/")
-get_standings(date = "20250226", time = "180000", dir = "01-DATA_RAW/")
-get_standings(date = "20250226", time = "220000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "020000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "060000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "100000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "140000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "180000", dir = "01-DATA_RAW/")
+get_standings(date = "20250308", time = "220000", dir = "01-DATA_RAW/")
 
-get_standings(from = "20250221", to = "20250223", dir = "01-DATA_RAW/")
+get_standings(from = "20250301", to = "20250306", dir = "01-DATA_RAW/")
 
 # Missing: 2025-02-05 18:00:00
 # Missing: 2025-02-10 18:00:00

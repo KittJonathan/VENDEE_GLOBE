@@ -241,7 +241,7 @@ all_data <- all_data |>
                          .default = lon))
 
 # Read existing standings dataset
-d1 <- read_csv("03-DATA_PROCESSED/standings_to_20250225_100000.csv")
+d1 <- read_csv("03-DATA_PROCESSED/standings.csv")
 
 # Combine both datasets
 full_data <- bind_rows(d1, all_data)
