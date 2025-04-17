@@ -249,3 +249,11 @@ full_data <- bind_rows(d1, all_data)
 # Export the dataset
 
 write_csv(x = full_data, file = "03-DATA_PROCESSED/standings.csv")
+
+# Regroup times at capes --------------------------------------------------
+
+times_01 <- read_csv("04-RESULTS/times_equator_1.csv")
+times_02 <- read_csv("04-RESULTS/times_good_hope.csv")
+times_03 <- read_csv("04-RESULTS/times_leeuwin.csv")
+times_04 <- read_csv("04-RESULTS/times_horn.csv")
+times_05 <- read_csv("04-RESULTS/times_equator_2.csv")
